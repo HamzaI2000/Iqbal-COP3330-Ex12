@@ -4,7 +4,8 @@
  */
  
 import java.util.Scanner;
-class SimpleInterest
+
+public class Main
 {
    double principal;
    double rate;
