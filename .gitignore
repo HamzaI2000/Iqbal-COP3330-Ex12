@@ -1,23 +1,38 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/*
+ *  UCF COP3330 Fall 2021 Assignment 12 Solution
+ *  Copyright 2021 Hamza Iqbal
+ */
+ 
+import java.util.Scanner;
+class SimpleInterest
+{
+   double principal;
+   double rate;
+   int years;
+   public void read()
+   {
+       System.out.print("Enter the principal: ");
+       Scanner sc = new Scanner(System.in);
+       this.principal = sc.nextDouble();
+       System.out.print("Enter the rate of interest: ");
+       this.rate = sc.nextDouble();
+       System.out.print("Enter the number of years: ");
+       this.years = sc.nextInt();
+   }
+   public void print()
+   {
+       int worth = (int)Math.round(principal*(1+rate*years*0.01));
+       System.out.println("After "+years+" years at "+rate+"%, the investment will be worth $"+worth );
+      
+   }
+}
+public class Main{
+   public static void main(String args[])
+   {
+       SimpleInterest ca = new SimpleInterest();
+       ca.read();
+       ca.print();
+         
+         
+   }
+}
